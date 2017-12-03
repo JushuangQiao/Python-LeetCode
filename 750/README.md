@@ -1,4 +1,22 @@
-# [725. Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/description/)
+# LeetCode 701-750
+[724. Find Pivot Index](https://leetcode.com/problems/find-pivot-index/description/)
+```python
+class Solution(object):
+    def pivotIndex(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        ret = sum(nums)
+        left = 0
+        for k, v in enumerate(nums):
+            if left * 2 + v == ret:
+                return k
+            left += v
+        return -1
+```
+
+[725. Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/description/)
 ```Python
 # Definition for singly-linked list.
 # class ListNode(object):
