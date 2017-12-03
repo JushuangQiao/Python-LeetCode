@@ -1,5 +1,23 @@
 # LeetCode 650-700
 
+654 [Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree/description/)
+```Python
+class Solution(object):
+    def constructMaximumBinaryTree(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: TreeNode
+        """
+        if not nums:
+            return None
+        max_value = max(nums)
+        max_index = nums.index(max_value)
+        root = TreeNode(max_value)
+        root.left = self.constructMaximumBinaryTree(nums[:max_index])
+        root.right = self.constructMaximumBinaryTree(nums[max_index+1:])
+        return root
+```
+
 680 [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/description/)
 ```Python
 class Solution(object):
