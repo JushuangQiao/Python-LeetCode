@@ -18,12 +18,6 @@ class Solution(object):
 
 [725. Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/description/)
 ```Python
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
 class Solution(object):
     def splitListToParts(self, root, k):
         """
@@ -52,5 +46,29 @@ class Solution(object):
             pre.next = None
             ret[indexs] = tmp
             indexs += 1
+        return ret
+```
+
+[728. Self Dividing Numbers](https://leetcode.com/problems/self-dividing-numbers/description/)
+```Python
+class Solution(object):
+    def selfDividingNumbers(self, left, right):
+        """
+        :type left: int
+        :type right: int
+        :rtype: List[int]
+        """
+        ret = []
+        for i in range(left, right+1):
+            val = i
+            flag = 1
+            while i:
+                remain = i % 10
+                if not remain or val % remain != 0:
+                    flag = 0
+                    break
+                i /= 10
+            if flag:
+                ret.append(val)
         return ret
 ```
