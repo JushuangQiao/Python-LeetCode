@@ -1,7 +1,3 @@
-# LeetCode 501-550
-
-[539. Minimum Time Difference](https://leetcode.com/problems/minimum-time-difference/description/)
-```Python
 class Solution(object):
     def findMinDifference(self, timePoints):
         """
@@ -18,4 +14,3 @@ class Solution(object):
         last = t[-1] - t[0] if t[-1]-t[0] <= 720 else 1440 - (t[-1]-t[0])
         ret = last if last < ret else ret
         return ret
-```
