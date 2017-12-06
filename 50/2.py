@@ -1,23 +1,9 @@
-# LeetCode 1-50
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
 
-1 [Two Sum](https://leetcode.com/problems/two-sum/description/)
-```python
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        dicts = {}
-        for k, v in enumerate(nums):
-            if target - v in dicts:
-                return [dicts.get(target-v), k]
-            dicts[v] = k
-```
-
-2 [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/)
-```Python
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
         """
@@ -45,6 +31,3 @@ class Solution(object):
             ret /= 10
             m = m.next
         return h.next
-```
-
-
