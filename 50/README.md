@@ -67,6 +67,24 @@ class Solution(object):
         return max_len
 ```
 
+49 [Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)
+```python
+class Solution(object):
+    def groupAnagrams(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
+        ret = {}
+        for s in strs:
+            ts = ''.join(sorted(s))
+            if ret.get(ts):
+                ret[ts].append(s)
+            else:
+                ret[ts] = [s]
+        return ret.values()
+```
+
 50 [Pow(x, n)](https://leetcode.com/problems/powx-n/description/)
 ```python
 class Solution(object):
