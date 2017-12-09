@@ -67,6 +67,18 @@ class Solution(object):
         return max_len
 ```
 
+46 [Permutations](https://leetcode.com/problems/permutations/description/)
+```Python
+class Solution(object):
+    def permute(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        from itertools import permutations
+        return list(permutations(nums))
+```
+
 47 [Permutations II](https://leetcode.com/problems/permutations-ii/description/)
 ```Python
 class Solution(object):
