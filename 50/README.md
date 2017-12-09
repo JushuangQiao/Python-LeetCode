@@ -67,6 +67,18 @@ class Solution(object):
         return max_len
 ```
 
+47 [Permutations II](https://leetcode.com/problems/permutations-ii/description/)
+```Python
+class Solution(object):
+    def permuteUnique(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        from itertools import permutations
+        return list(set(permutations(nums)))
+```
+
 48 [Rotate Image](https://leetcode.com/problems/rotate-image/description/)
 ```Python
 class Solution(object):
