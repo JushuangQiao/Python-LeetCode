@@ -67,6 +67,18 @@ class Solution(object):
         return max_len
 ```
 
+28 [Implement strStr()](https://leetcode.com/problems/implement-strstr/description/)
+```python
+class Solution(object):
+    def strStr(self, haystack, needle):
+        """
+        :type haystack: str
+        :type needle: str
+        :rtype: int
+        """
+        return haystack.find(needle)
+```
+
 33 [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
 ```python
 class Solution(object):
