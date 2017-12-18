@@ -67,6 +67,25 @@ class Solution(object):
         return max_len
 ```
 
+26 [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
+```python
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        left = ret = 0
+        cur = None
+        while left < len(nums):
+            if nums[left] != cur:
+                nums[ret] = nums[left]
+                ret += 1
+                cur = nums[left]
+            left += 1
+        return ret
+```
+
 27 [Remove Element](https://leetcode.com/problems/remove-element/description/)
 ```python
 class Solution(object):
