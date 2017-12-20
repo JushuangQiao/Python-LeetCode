@@ -67,6 +67,24 @@ class Solution(object):
         return max_len
 ```
 
+24 [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/description/)
+```python
+class Solution(object):
+    def swapPairs(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        pre = m_pre = ListNode(0)
+        pre.next = head
+        while head and head.next:
+            hn = head.next
+            hnn = hn.next
+            pre.next, hn.next, head.next = hn, head, hnn
+            pre, head = head, hnn
+        return m_pre.next
+```
+
 26 [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
 ```python
 class Solution(object):
