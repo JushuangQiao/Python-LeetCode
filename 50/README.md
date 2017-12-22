@@ -67,6 +67,30 @@ class Solution(object):
         return max_len
 ```
 
+19 [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/)
+```python
+class Solution(object):
+    def removeNthFromEnd(self, head, n):
+        """
+        :type head: ListNode
+        :type n: int
+        :rtype: ListNode
+        """
+        stack = []
+        move = head
+        while move:
+            stack.append(move)
+            move = move.next
+        if len(stack) == n:
+            return head.next
+        if n == 1:
+            stack[-n-1].next = None
+        else:
+            stack[-n-1].next = stack[-n+1]
+            stack[-n].next = None
+        return head
+```
+
 20 [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
 ```python
 class Solution(object):
@@ -100,12 +124,6 @@ class Solution(object):
 
 21 [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
 ```python
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
 class Solution(object):
     def mergeTwoLists(self, l1, l2):
         """
