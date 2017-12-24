@@ -66,6 +66,23 @@ class Solution(object):
             right += 1
         return max_len
 ```
+9 [Palindrome Number](https://leetcode.com/problems/palindrome-number/description/)
+```python
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        if x < 0:
+            return False
+        r = 0
+        t = x
+        while t:
+            r = r * 10 + t % 10
+            t /= 10
+        return r == x
+```
 
 11 [Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/)
 ```python
