@@ -67,6 +67,27 @@ class Solution(object):
         return max_len
 ```
 
+14 [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/)
+```python
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        if not strs:
+            return ''
+        pre = strs[0]
+        for s in strs:
+            len_pre = len(pre)
+            while s[0:len_pre] != pre:
+                len_pre -= 1
+                pre = pre[0:len_pre]
+                if not pre:
+                    return pre
+        return pre
+```
+
 19 [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/)
 ```python
 class Solution(object):
