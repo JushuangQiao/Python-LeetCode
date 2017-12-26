@@ -73,6 +73,27 @@ class Solution(object):
         return ret
 ```
 
+744 [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/)
+```python
+class Solution(object):
+    def nextGreatestLetter(self, letters, target):
+        """
+        :type letters: List[str]
+        :type target: str
+        :rtype: str
+        """
+        left, right = 0, len(letters) - 1
+        while left <= right:
+            mid = (left + right) / 2
+            if letters[mid] <= target:
+                left = mid + 1
+            else:
+                if mid < 1 or (mid >= 1 and letters[mid-1] <= target):
+                    return letters[mid]
+                right = mid - 1
+        return letters[0]
+```
+
 747 [Largest Number Greater Than Twice of Others](https://leetcode.com/problems/largest-number-greater-than-twice-of-others/description/)
 ```python
 class Solution(object):
