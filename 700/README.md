@@ -70,4 +70,23 @@ class Solution(object):
         return self.isPalindrome(s, 0, len(s)-1, 0)
 ```
 
+693 [Binary Number with Alternating Bits](https://leetcode.com/problems/binary-number-with-alternating-bits/description/)
+```python
+class Solution(object):
+    def hasAlternatingBits(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        a = n % 2
+        n = n >> 1
+        while n:
+            t = n % 2
+            if t == a:
+                return False
+            a = t
+            n = n >> 1
+        return a != n
+```
+
 
