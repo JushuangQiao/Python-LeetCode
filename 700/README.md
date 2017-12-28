@@ -45,6 +45,26 @@ class Solution(object):
         return ret[1] if len(ret) == 2 else -1
 ```
 
+674 [Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/)
+```python
+class Solution(object):
+    def findLengthOfLCIS(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        ret, tmp = 0, 0
+        pre = float('-inf')
+        for n in nums:
+            if n > pre:
+                tmp += 1
+            else:
+                ret = max(ret, tmp)
+                tmp = 1
+            pre = n
+        return max(ret, tmp)
+```
+
 680 [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/description/)
 ```Python
 class Solution(object):
