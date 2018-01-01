@@ -1,5 +1,27 @@
 # LeetCode 601-650
 
+606 [Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/description/)
+```python
+class Solution(object):
+    def tree2str(self, t):
+        """
+        :type t: TreeNode
+        :rtype: str
+        """
+        if not t:
+            return ''
+        root = str(t.val)
+        left = self.tree2str(t.left)
+        right = self.tree2str(t.right)
+        if right:
+            return root + '(' + left + ')(' + right + ')'
+        else:
+            if left:
+                return root + '(' + left + ')'
+            else:
+                return root
+```
+
 617 [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/description/)
 ```python
 class Solution(object):
