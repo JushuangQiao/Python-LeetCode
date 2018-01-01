@@ -1,5 +1,24 @@
 # LeetCode 601-650
 
+617 [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/description/)
+```python
+class Solution(object):
+    def mergeTrees(self, t1, t2):
+        """
+        :type t1: TreeNode
+        :type t2: TreeNode
+        :rtype: TreeNode
+        """
+        if not t1:
+            return t2
+        if not t2:
+            return t1
+        root = TreeNode(t1.val+t2.val)
+        root.left = self.mergeTrees(t1.left, t2.left)
+        root.right = self.mergeTrees(t1.right, t2.right)
+        return root
+```
+
 633 [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/description/)
 ```python
 class Solution(object):
