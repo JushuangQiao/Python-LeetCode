@@ -1,5 +1,16 @@
 # LeetCode 551-600
 
+557 [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/description/)
+```python
+class Solution(object):
+    def reverseWords(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        return ' '.join(map(lambda t:t[::-1], s.split(' ')))
+```
+
 593 [Valid Square](https://leetcode.com/problems/valid-square/description/)
 ```python
 class Solution(object):
