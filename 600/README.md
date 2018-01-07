@@ -1,5 +1,16 @@
 # LeetCode 551-600
 
+551 [Student Attendance Record I](https://leetcode.com/problems/student-attendance-record-i/description/)
+```python
+class Solution(object):
+    def checkRecord(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        return s.count('A') < 2 and 'LLL' not in s
+```
+
 557 [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/description/)
 ```python
 class Solution(object):
