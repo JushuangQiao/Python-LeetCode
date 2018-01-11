@@ -1,5 +1,22 @@
 # LeetCode 501-550
 
+530 [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/)
+```python
+class Solution(object):
+    def getMinimumDifference(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        ret = []
+        def dfs(r):
+            if r.left: dfs(r.left)
+            ret.append(r.val)
+            if r.right: dfs(r.right)
+        dfs(root)
+        return min([abs(ret[i]-ret[i+1]) for i in range(len(ret)-1)])
+```
+
 537 [Complex Number Multiplication](https://leetcode.com/problems/complex-number-multiplication/description/)
 ```python
 class Solution(object):
