@@ -1,5 +1,16 @@
 # LeetCode 501-550
 
+520 [Detect Capital](https://leetcode.com/problems/detect-capital/description/)
+```python
+class Solution(object):
+    def detectCapitalUse(self, word):
+        """
+        :type word: str
+        :rtype: bool
+        """
+        return word.islower() or word.isupper() or word.istitle()
+```
+
 530 [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/)
 ```python
 class Solution(object):
