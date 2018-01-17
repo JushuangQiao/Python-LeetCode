@@ -1,5 +1,30 @@
 # LeetCode 501-550
 
+515 [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/)
+```python
+class Solution(object):
+    def largestValues(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        ret = []
+        if not root:
+            return ret
+        level = 0
+        node = [[root, level]]
+        while node:
+            ret.append(max(map(lambda x:x[0].val, node)))
+            level += 1
+            while node and node[0][1] < level:
+                tmp = node.pop(0)
+                if tmp[0].left:
+                    node.append([tmp[0].left, level])
+                if tmp[0].right:
+                    node.append([tmp[0].right, level])
+        return ret
+```
+
 520 [Detect Capital](https://leetcode.com/problems/detect-capital/description/)
 ```python
 class Solution(object):
