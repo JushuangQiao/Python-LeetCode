@@ -1,5 +1,27 @@
 # LeetCode 501-550
 
+513 [Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/description/)
+```python
+class Solution(object):
+    def findBottomLeftValue(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        from collections import deque
+        d = deque()
+        d.append(root)
+        ret = root.val
+        while d:
+            node = d.popleft()
+            ret = node.val
+            if node.right:
+                d.append(node.right)
+            if node.left:
+                d.append(node.left)
+        return ret
+```
+
 515 [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/)
 ```python
 class Solution(object):
