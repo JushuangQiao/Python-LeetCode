@@ -1,5 +1,25 @@
 # LeetCode 501-550
 
+507 [Perfect Number](https://leetcode.com/problems/perfect-number/description/)
+```python
+class Solution(object):
+    def checkPerfectNumber(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        from math import sqrt
+        if num <= 3:
+            return False
+        tsum, end = 1, int(sqrt(num)) + 1
+        for n in range(2, end):
+            if num % n == 0:
+                tsum += n + int(num / n)
+            if tsum > num:
+                return False
+        return tsum == num
+```
+
 513 [Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/description/)
 ```python
 class Solution(object):
