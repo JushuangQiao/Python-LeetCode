@@ -1,5 +1,23 @@
 # LeetCode 501-550
 
+504 [Base 7](https://leetcode.com/problems/base-7/description/)
+```python
+class Solution(object):
+    def convertToBase7(self, num):
+        """
+        :type num: int
+        :rtype: str
+        """
+        if num == 0:
+            return '0'
+        ret = ''
+        n = abs(num)
+        while n:
+            ret += str(n % 7)
+            n = n / 7
+        return '-' + ret[::-1] if num < 0 else ret[::-1]
+```
+
 507 [Perfect Number](https://leetcode.com/problems/perfect-number/description/)
 ```python
 class Solution(object):
