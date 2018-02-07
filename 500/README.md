@@ -1,5 +1,23 @@
 # LeetCode 451-500
 
+485 [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/description/)
+```python
+class Solution(object):
+    def findMaxConsecutiveOnes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        ret = tmp = 0
+        for n in nums:
+            if n:
+                tmp += 1
+            else:
+                ret = max(tmp, ret)
+                tmp = 0
+        return max(ret, tmp)
+```
+
 492 [Construct the Rectangle](https://leetcode.com/problems/construct-the-rectangle/description/)
 ```python
 class Solution(object):
