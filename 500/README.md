@@ -1,5 +1,31 @@
 # LeetCode 451-500
 
+482 [License Key Formatting](https://leetcode.com/problems/license-key-formatting/description/)
+```python
+class Solution(object):
+    def licenseKeyFormatting(self, S, K):
+        """
+        :type S: str
+        :type K: int
+        :rtype: str
+        """
+        s = S[::-1]
+        ret = []
+        leng = 0
+        tmp = []
+        for c in s:
+            if c != '-':
+                if leng == K:
+                    ret.append(''.join(tmp))
+                    leng = 1
+                    tmp = [c.upper()]
+                else:
+                    tmp.append(c.upper())
+                    leng += 1
+        ret.append(''.join(tmp))
+        return '-'.join(ret)[::-1]
+```
+
 485 [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/description/)
 ```python
 class Solution(object):
