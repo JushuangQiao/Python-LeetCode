@@ -1,5 +1,16 @@
 # LeetCode 451-500
 
+476 [Number Complement](https://leetcode.com/problems/number-complement/description/)
+```python
+class Solution(object):
+    def findComplement(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        return int(''.join(map(lambda x:'1' if x=='0' else '0', bin(num)[2:])), 2)
+```
+
 482 [License Key Formatting](https://leetcode.com/problems/license-key-formatting/description/)
 ```python
 class Solution(object):
