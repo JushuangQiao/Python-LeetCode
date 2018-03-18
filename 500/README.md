@@ -1,5 +1,17 @@
 # LeetCode 451-500
 
+461 [Hamming Distance](https://leetcode.com/problems/hamming-distance/description/)
+```python
+class Solution(object):
+    def hammingDistance(self, x, y):
+        """
+        :type x: int
+        :type y: int
+        :rtype: int
+        """
+        return bin(x^y).count('1')
+```
+
 468 [Validate IP Address](https://leetcode.com/problems/validate-ip-address/description/)
 ```python
 class Solution(object):
