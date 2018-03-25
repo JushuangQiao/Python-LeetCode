@@ -1,5 +1,24 @@
 # LeetCode 451-500
 
+455 [Assign Cookies](https://leetcode.com/problems/assign-cookies/description/)
+```python
+class Solution(object):
+    def findContentChildren(self, g, s):
+        """
+        :type g: List[int]
+        :type s: List[int]
+        :rtype: int
+        """
+        g.sort()
+        s.sort()
+        i, j = 0, 0
+        while i < len(g) and j < len(s):
+            if s[j] >= g[i]:
+                i += 1
+            j += 1
+        return i
+```
+
 461 [Hamming Distance](https://leetcode.com/problems/hamming-distance/description/)
 ```python
 class Solution(object):
