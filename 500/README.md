@@ -1,5 +1,18 @@
 # LeetCode 451-500
 
+451 [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/description/)
+```python
+class Solution(object):
+    def frequencySort(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        from collections import Counter
+        c = Counter(s)
+        return ''.join([i[0]*i[1] for i in c.most_common()])
+```
+
 455 [Assign Cookies](https://leetcode.com/problems/assign-cookies/description/)
 ```python
 class Solution(object):
