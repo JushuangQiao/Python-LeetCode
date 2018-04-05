@@ -1,5 +1,16 @@
 # LeegtCode 401-450
 
+441 [Arranging Coins](https://leetcode.com/problems/arranging-coins/description/)
+```python
+class Solution(object):
+    def arrangeCoins(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        return int(((2 + 8*n) ** 0.5 - 1) / 2) 
+```
+
 442 [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/description/)
 ```python
 class Solution(object):
