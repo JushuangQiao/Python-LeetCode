@@ -1,5 +1,16 @@
 # LeegtCode 401-450
 
+434 [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/description/)
+```python
+class Solution(object):
+    def countSegments(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        return len(s.split())
+```
+
 441 [Arranging Coins](https://leetcode.com/problems/arranging-coins/description/)
 ```python
 class Solution(object):
