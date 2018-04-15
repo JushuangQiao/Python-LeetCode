@@ -1,5 +1,16 @@
 # LeegtCode 401-450
 
+412 [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/description/)
+```python
+class Solution(object):
+    def fizzBuzz(self, n):
+        """
+        :type n: int
+        :rtype: List[str]
+        """
+        return [(not i % 3)*'Fizz' + (not i % 5)*'Buzz' or str(i) for i in range(1, n+1)]
+```
+
 414 [Third Maximum Number](https://leetcode.com/problems/third-maximum-number/description/)
 415 [Add Strings](https://leetcode.com/problems/add-strings/description/)
 ```python
