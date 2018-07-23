@@ -1,5 +1,24 @@
 # Python-LeetCode
-solve leetcode using Python
+
+<font color='#FF0000' size=4>Python-LeetCode</font><font size=3> 是一个使用 Python 语言解决 LeetCode 问题的代码库，库有以下几个方面需要注意：</font><br>
+
+* 所有题目都是 AC 的；<br>
+
+* 按照题目顺序，每 50 个放在一个目录下，方便查看；<br>
+
+* <font color='#FF0000'>水平所限，无法保证每个题目都是使用的最好的算法；</font><br>
+
+* 对于链表和二叉树等结构，会配备测试代码方便本地调试；<br>
+
+* 部分题目会直接使用 Python 的标准库，比如进行一些别的计算之前，需要先对列表进行排序，这时候可能会直接使用 sort();<br>
+
+* 部分题目在别的博客中解释了自己的解题思路，可以点击 <font color='#FF0000'>[这里](./blog)</font> 查看;<br>
+
+* 库会尽量持续更新，加入更多的题目。
+
+如有问题，欢迎指出，一起交流进步！
+
+下面是目录的链接
 
 ## [Problems:1-50](./50)
 
