@@ -1,7 +1,3 @@
-# LeetCode 751-800
-
-791 [Custom Sort String](https://leetcode.com/problems/custom-sort-string/description/)
-```python
 class Solution(object):
     def customSortString(self, S, T):
         """
@@ -21,15 +17,3 @@ class Solution(object):
         for k in t_hash.keys():
             ret.append(k * t_hash[k])
         return ''.join(ret)
-```
-796 [Rotate String](https://leetcode.com/problems/rotate-string/description/)
-```python
-class Solution(object):
-    def rotateString(self, A, B):
-        """
-        :type A: str
-        :type B: str
-        :rtype: bool
-        """
-        return len(A) == len(B) and B in (A + A)
-```
