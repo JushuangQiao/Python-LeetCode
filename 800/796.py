@@ -1,7 +1,3 @@
-# LeetCode 751-800
-
-796 [Rotate String](https://leetcode.com/problems/rotate-string/description/)
-```python
 class Solution(object):
     def rotateString(self, A, B):
         """
@@ -10,4 +6,3 @@ class Solution(object):
         :rtype: bool
         """
         return len(A) == len(B) and B in (A + A)
-```
