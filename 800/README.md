@@ -1,6 +1,6 @@
 # LeetCode 751-800
 
-783 []()
+783 [Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/)
 ```python
 # Definition for a binary tree node.
 # class TreeNode(object):
