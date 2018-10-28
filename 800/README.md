@@ -16,6 +16,7 @@ class Solution(object):
                 ret += 1
         return ret
 ```
+
 783 [Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/)
 ```python
 class Solution(object):
