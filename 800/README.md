@@ -1,5 +1,21 @@
 # LeetCode 751-800
 
+771 [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/)
+```python
+class Solution(object):
+    def numJewelsInStones(self, J, S):
+        """
+        :type J: str
+        :type S: str
+        :rtype: int
+        """
+        j_hash = {c: True for c in J}
+        ret = 0
+        for c in S:
+            if j_hash.get(c):
+                ret += 1
+        return ret
+```
 783 [Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/)
 ```python
 class Solution(object):
