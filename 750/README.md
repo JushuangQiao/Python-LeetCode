@@ -1,4 +1,16 @@
 # LeetCode 701-750
+
+[709. To Lower Case](https://leetcode.com/problems/to-lower-case/)
+```python
+class Solution(object):
+    def toLowerCase(self, str):
+        """
+        :type str: str
+        :rtype: str
+        """
+        return str.lower()
+```
+
 [724. Find Pivot Index](https://leetcode.com/problems/find-pivot-index/description/)
 ```python
 class Solution(object):
