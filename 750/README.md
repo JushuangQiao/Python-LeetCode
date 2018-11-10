@@ -11,6 +11,20 @@ class Solution(object):
         return str.lower()
 ```
 
+[717. 1-bit and 2-bit Characters](https://leetcode.com/problems/1-bit-and-2-bit-characters/)
+```python
+class Solution(object):
+    def isOneBitCharacter(self, bits):
+        """
+        :type bits: List[int]
+        :rtype: bool
+        """
+        length, mv = len(bits), 0
+        while mv < length - 1:
+            mv += (1 + bits[mv])
+        return mv <= length - 1
+```
+
 [724. Find Pivot Index](https://leetcode.com/problems/find-pivot-index/description/)
 ```python
 class Solution(object):
