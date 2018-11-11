@@ -4,8 +4,7 @@ class Solution(object):
         :type emails: List[str]
         :rtype: int
         """
-        ret = {self.simplifyEmail(email): True for email in emails}
-        return len(ret.keys())
+        return len({self.simplifyEmail(email): True for email in emails})
 
     def simplifyEmail(self, email):
         name, domain = email.split('@')
