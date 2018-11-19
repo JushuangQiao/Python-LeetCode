@@ -23,6 +23,23 @@ class Solution(object):
                 end -= 1
         return A
 ```
+
+908 [Smallest Range I](https://leetcode.com/problems/smallest-range-i/)
+```python
+class Solution(object):
+    def smallestRangeI(self, A, K):
+        """
+        :type A: List[int]
+        :type K: int
+        :rtype: int
+        """
+        mi = ma = -1
+        for a in A:
+            mi = min(mi, a) if mi > -1 else a
+            ma = max(ma, a) if ma > -1 else a
+        return 0 if 2 * K > ma - mi else ma - mi - 2 * K
+```
+
 929 [Unique Email Addresses](https://leetcode.com/problems/unique-email-addresses)
 ```python
 class Solution(object):
