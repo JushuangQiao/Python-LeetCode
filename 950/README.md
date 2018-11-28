@@ -40,6 +40,30 @@ class Solution(object):
         return 0 if 2 * K > ma - mi else ma - mi - 2 * K
 ```
 
+917 [Reverse Only Letters](https://leetcode.com/problems/reverse-only-letters/)
+```python
+class Solution(object):
+    def reverseOnlyLetters(self, S):
+        """
+        :type S: str
+        :rtype: str
+        """
+        s = list(S)
+        l, r = 0, len(s) - 1
+        while l < r:
+            if s[l].isalpha() and s[r].isalpha():
+                s[l], s[r] = s[r], s[l]
+                l += 1
+                r -= 1
+            elif s[l].isalpha() and not s[r].isalpha():
+                r -= 1
+            elif not s[l].isalpha() and s[r].isalpha():
+                l += 1
+            else:
+                l += 1
+                r -= 1
+        return ''.join(s)
+```
 929 [Unique Email Addresses](https://leetcode.com/problems/unique-email-addresses)
 ```python
 class Solution(object):
