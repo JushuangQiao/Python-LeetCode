@@ -325,6 +325,32 @@ class Solution(object):
         return m_pre.next
 ```
 
+```python
+25 [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+class Solution(object):
+    def reverseKGroup(self, head, k):
+        """
+        :type head: ListNode
+        :type k: int
+        :rtype: ListNode
+        """
+        move, count = head, 0
+        while move:
+            count += 1
+            move = move.next
+        if count < k:
+            return head
+        move, current_count, current_last = head, 0, head
+        move_pre = None
+        while current_count < k:
+            m_next = move.next
+            move.next, move_pre = move_pre, move
+            move = m_next
+            current_count += 1
+        current_last.next = self.reverseKGroup(move, k)
+        return move_pre
+```
+
 26 [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
 ```python
 class Solution(object):
