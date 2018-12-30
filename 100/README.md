@@ -17,6 +17,21 @@ class Solution(object):
         return max_val
 ```
 
+58 [Length of Last Word](https://leetcode.com/problems/length-of-last-word/)
+```python
+class Solution(object):
+    def lengthOfLastWord(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        ret = 0
+        for c in s.strip()[::-1]:
+            if c == ' ':
+                break
+            ret += 1
+        return ret
+```
 94 [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)
 ```Python
 class Solution(object):
