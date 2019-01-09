@@ -144,13 +144,6 @@ class Solution(object):
 
 100 [Same Tree](https://leetcode.com/problems/same-tree/)
 ```python
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution(object):
     def isSameTree(self, p, q):
         """
