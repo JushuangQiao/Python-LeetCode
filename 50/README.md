@@ -325,8 +325,8 @@ class Solution(object):
         return m_pre.next
 ```
 
-```python
 25 [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+```python
 class Solution(object):
     def reverseKGroup(self, head, k):
         """
