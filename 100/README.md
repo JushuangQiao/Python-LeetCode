@@ -142,6 +142,30 @@ class Solution(object):
         return ret
 ```
 
+98 [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+```python
+class Solution(object):
+    def isValidBST(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        ret = []
+
+        def in_order(root):
+            if not root:
+                return
+            in_order(root.left)
+            ret.append(root.val)
+            in_order(root.right)
+        in_order(root)
+        leng = len(ret)
+        for k in range(leng - 1):
+            if ret[k] >= ret[k + 1]:
+                return False
+        return True
+```
+
 100 [Same Tree](https://leetcode.com/problems/same-tree/)
 ```python
 class Solution(object):
