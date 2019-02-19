@@ -17,6 +17,18 @@ class Solution(object):
         return root
 ```
 
+237 [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)
+```python
+class Solution(object):
+    def deleteNode(self, node):
+        """
+        :type node: ListNode
+        :rtype: void Do not return anything, modify node in-place instead.
+        """
+        p = node.next
+        node.next, node.val = p.next, p.val
+```
+
 240 [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
 ```python
 class Solution(object):
