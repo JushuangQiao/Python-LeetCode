@@ -19,6 +19,21 @@ class Solution(object):
         return sum(tmp)
 ```
 
+206 []()
+```
+class Solution(object):
+    def reverseList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        pre = None
+        while head:
+            n, head.next = head.next, pre
+            pre, head = head, n
+        return pre
+```
+
 226 [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/)
 ```python
 class Solution(object):
