@@ -1,6 +1,25 @@
 # LeetCode 201-250
 
-[226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/)
+204 [Count Primes](https://leetcode.com/problems/count-primes/)
+```python
+class Solution(object):
+    def countPrimes(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        if n <= 2:
+            return 0
+        tmp = [1] * n
+        tmp[0] = tmp[1] = 0
+        for i in range(2, int(n**0.5) + 1):
+            if tmp[i]:
+                for j in range(2, (n - 1)/i+1):
+                    tmp[i*j] = 0
+        return sum(tmp)
+```
+
+226 [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/)
 ```python
 class Solution(object):
     def invertTree(self, root):
