@@ -11,3 +11,20 @@ class Solution(object):
         tmp = s.split()
         return ' '.join(tmp[::-1])
 ```
+
+172 [Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)
+```
+class Solution(object):
+    def trailingZeroes(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        ret, carry = 0, 1
+        while True:
+            cnt = n / 5 ** carry
+            if cnt == 0:
+                return ret
+            ret += cnt
+            carry += 1
+```
