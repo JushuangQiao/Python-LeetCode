@@ -22,6 +22,31 @@ class Solution(object):
         return ' '.join(map(lambda t:t[::-1], s.split(' ')))
 ```
 
+572 [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+```python
+class Solution(object):
+    def isSubtree(self, s, t):
+        """
+        :type s: TreeNode
+        :type t: TreeNode
+        :rtype: bool
+        """
+        if not s:
+            return False
+        if self.isSame(s, t):
+            return True
+        return self.isSubtree(s.left, t) or self.isSubtree(s.right, t)
+
+    def isSame(self, s, t):
+        if not s and not t:
+            return True
+        if not s or not t:
+            return False
+        if s.val != t.val:
+            return False
+        return self.isSame(s.left, t.left) and self.isSame(s.right, t.right)
+```
+
 593 [Valid Square](https://leetcode.com/problems/valid-square/description/)
 ```python
 class Solution(object):
